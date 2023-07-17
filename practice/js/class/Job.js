@@ -1,4 +1,4 @@
-export default class Job {
+class Job {
   id;
   title;
   amount;
@@ -15,3 +15,4 @@ export default class Job {
     this.isDone = true;
   }
 }
+export default Job;

@@ -21,7 +21,7 @@ export default class Freelancer extends Employee {
     // atrinkti tik pabaigtus darbus (.filter)
     // gauti pinigu sumas uz tuos darbus (.map)
     // suskaiciuojam kiek yra tu pinigu
-    // istrinti is darbu masyvo baigtus darbus
+    // istrinti is darbu masyvo baigtus darbus (splice, filter)
     // grazinti moketina suma
   }
 }
