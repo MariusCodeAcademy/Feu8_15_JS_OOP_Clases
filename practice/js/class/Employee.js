@@ -11,4 +11,8 @@ export default class Employee {
     console.log('fullName ===', fullName);
     return fullName;
   }
+
+  calcPay() {
+    throw new Error('This should be working in child classes ');
+  }
 }
