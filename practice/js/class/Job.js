@@ -1,4 +1,4 @@
-class Job {
+export default class Job {
   id;
   title;
   amount;

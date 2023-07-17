@@ -1,5 +1,6 @@
 import Employee from './class/Employee.js';
 import MyWorker from './class/MyWorker.js';
+import Job from './class/Job.js';
 console.log('app.js file was loaded');
 
 const em1 = new Employee('James', 'Bond');
