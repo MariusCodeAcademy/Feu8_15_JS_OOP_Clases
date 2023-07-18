@@ -11,7 +11,7 @@ class Job {
     this.isDone = false;
   }
 
-  finishJob() {
+  makeJobDone() {
     this.isDone = true;
   }
 }

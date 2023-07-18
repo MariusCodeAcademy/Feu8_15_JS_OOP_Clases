@@ -29,7 +29,9 @@ f1.asignJob(j1);
 f1.asignJob(jArr[0]);
 f1.asignJob(jArr[1]);
 
-f1.asignJob({ name: 'mike', msg: 'how are you' });
+// f1.asignJob({ name: 'mike', msg: 'how are you' });
 f1.finishJob(j1);
+f1.finishJob(jArr[1]);
 console.log('f1 ===', f1);
 console.table(f1.jobsArr);
+f1.calcPay();
