@@ -35,3 +35,4 @@ f1.finishJob(jArr[1]);
 console.log('f1 ===', f1);
 console.table(f1.jobsArr);
 f1.calcPay();
+console.log('f1 after pay ===', f1);

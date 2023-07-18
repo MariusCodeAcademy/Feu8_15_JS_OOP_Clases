@@ -40,10 +40,21 @@ export default class Freelancer extends Employee {
       (oneJobObj) => oneJobObj.isDone === true
     );
     console.table(doneJobsArr);
+    console.log('doneJobsArr ===', doneJobsArr);
     // gauti pinigu sumas uz tuos darbus (.map)
-
+    const sumosArr = doneJobsArr.map((oneJobObj) => oneJobObj.amount);
+    console.log('sumosArr ===', sumosArr);
     // suskaiciuojam kiek yra tu pinigu
+    const howMuchToPay = sumosArr.reduce((total, sk) => total + sk, 0);
+    console.log('howMuchToPay ===', howMuchToPay);
+    console.log('this.jobsArr ===', this.jobsArr);
     // istrinti is darbu masyvo baigtus darbus (splice, filter)
+    this.jobsArr = this.jobsArr.filter(
+      (oneJobObj) => oneJobObj.isDone === false
+    );
+    console.log('this.jobsArr ===', this.jobsArr);
+    console.log(`${this.getFullName()} gets paid ${howMuchToPay} dollars`);
     // grazinti moketina suma
+    return howMuchToPay;
   }
 }
