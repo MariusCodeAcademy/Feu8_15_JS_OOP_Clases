@@ -4,35 +4,31 @@ import Job from './class/Job.js';
 import Freelancer from './class/Freelancer.js';
 console.log('app.js file was loaded');
 
-const em1 = new Employee('James', 'Bond');
-console.log('em1 ===', em1);
-// em1.calcPay();
-const w1 = new MyWorker('Jess', 'Smith', 15);
-console.log('w1 ===', w1);
-w1.getFullName();
-w1.work(10);
-w1.work(12);
-w1.calcPay();
+// darbotoju sarasas
+const employeesArr = [
+  new MyWorker('Darbas', 'Sunkus', 15), // 0
+  new MyWorker('Jess', 'Smith', 25), // 1
+  new Freelancer('Serbentaudas', 'Bordiuras'), // 2
+  new Freelancer('James', 'Band'), // 3
+];
 
-const j1 = new Job('Header css', 100);
-console.log('j1 ===', j1);
 const jArr = [
   new Job('Footer', 250), // 0
   new Job('Aside', 150), // 1
   new Job('Main', 500), // 2
   new Job('Slider', 600), // 3
 ];
-console.log('jArr ===', jArr);
 
-const f1 = new Freelancer('Mike', 'T');
-f1.asignJob(j1);
-f1.asignJob(jArr[0]);
-f1.asignJob(jArr[1]);
+// priskirti darbu freelanceriam
+employeesArr[2].asignJob(jArr[1]);
+employeesArr[2].asignJob(jArr[2]);
+employeesArr[3].asignJob(jArr[0]);
+employeesArr[3].asignJob(jArr[3]);
 
-// f1.asignJob({ name: 'mike', msg: 'how are you' });
-f1.finishJob(j1);
-f1.finishJob(jArr[1]);
-console.log('f1 ===', f1);
-console.table(f1.jobsArr);
-f1.calcPay();
-console.log('f1 after pay ===', f1);
+// darbuotojai isdirba valandas
+employeesArr[0].work(80);
+employeesArr[0].work(80);
+employeesArr[1].work(50);
+employeesArr[1].work(10);
+
+console.log('employeesArr ===', employeesArr);

@@ -8,7 +8,7 @@ export default class Employee {
 
   getFullName() {
     const fullName = `${this.name} ${this.surname}`;
-    console.log('fullName ===', fullName);
+    // console.log('fullName ===', fullName);
     return fullName;
   }
 
