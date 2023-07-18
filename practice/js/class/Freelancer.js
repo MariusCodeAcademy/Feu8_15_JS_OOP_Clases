@@ -26,7 +26,7 @@ export default class Freelancer extends Employee {
     const found = this.jobsArr.find(
       (oneJobObj) => oneJobObj === jobObjToBeFinished
     );
-    console.log('found ===', found);
+    // console.log('found ===', found);
     // jam iskviesim .makeJobDone metoda
     console.log(
       `${this.name} has done ${found.title} job for ${found.amount} dollars`
@@ -39,20 +39,20 @@ export default class Freelancer extends Employee {
     const doneJobsArr = this.jobsArr.filter(
       (oneJobObj) => oneJobObj.isDone === true
     );
-    console.table(doneJobsArr);
-    console.log('doneJobsArr ===', doneJobsArr);
+    // console.table(doneJobsArr);
+    // console.log('doneJobsArr ===', doneJobsArr);
     // gauti pinigu sumas uz tuos darbus (.map)
     const sumosArr = doneJobsArr.map((oneJobObj) => oneJobObj.amount);
-    console.log('sumosArr ===', sumosArr);
+    // console.log('sumosArr ===', sumosArr);
     // suskaiciuojam kiek yra tu pinigu
     const howMuchToPay = sumosArr.reduce((total, sk) => total + sk, 0);
-    console.log('howMuchToPay ===', howMuchToPay);
-    console.log('this.jobsArr ===', this.jobsArr);
+    // console.log('howMuchToPay ===', howMuchToPay);
+    // console.log('this.jobsArr ===', this.jobsArr);
     // istrinti is darbu masyvo baigtus darbus (splice, filter)
     this.jobsArr = this.jobsArr.filter(
       (oneJobObj) => oneJobObj.isDone === false
     );
-    console.log('this.jobsArr ===', this.jobsArr);
+    // console.log('this.jobsArr ===', this.jobsArr);
     console.log(`${this.getFullName()} gets paid ${howMuchToPay} dollars`);
     // grazinti moketina suma
     return howMuchToPay;

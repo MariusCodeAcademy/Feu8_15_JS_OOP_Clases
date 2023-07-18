@@ -31,4 +31,18 @@ employeesArr[0].work(80);
 employeesArr[1].work(50);
 employeesArr[1].work(10);
 
+// freelanceriai baigia darbus
+employeesArr[2].finishJob(jArr[1]);
+employeesArr[2].finishJob(jArr[2]);
+employeesArr[3].finishJob(jArr[3]);
+
 console.log('employeesArr ===', employeesArr);
+
+// ismoketi algas
+const algosArr = employeesArr.map((oneEmploObj) => {
+  return {
+    personName: oneEmploObj.getFullName(),
+    salary: oneEmploObj.calcPay(),
+  };
+});
+console.log('algosArr ===', algosArr);
