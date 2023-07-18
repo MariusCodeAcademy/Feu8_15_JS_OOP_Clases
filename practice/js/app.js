@@ -25,4 +25,7 @@ const jArr = [
 console.log('jArr ===', jArr);
 
 const f1 = new Freelancer('Mike', 'T');
+f1.asignJob(j1);
+f1.asignJob(jArr[0]);
+f1.asignJob(jArr[1]);
 console.log('f1 ===', f1);

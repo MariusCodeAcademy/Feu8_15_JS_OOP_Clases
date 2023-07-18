@@ -10,6 +10,7 @@ export default class Freelancer extends Employee {
 
   asignJob(newJob) {
     // prideti darba i darbu masyva
+    this.jobsArr.push(newJob);
   }
 
   finishJob(jobObj) {
