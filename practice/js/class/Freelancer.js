@@ -1,5 +1,5 @@
 import Employee from './Employee.js';
-
+import Job from './Job.js';
 export default class Freelancer extends Employee {
   jobsArr;
 
@@ -9,8 +9,13 @@ export default class Freelancer extends Employee {
   }
 
   asignJob(newJob) {
-    // prideti darba i darbu masyva
-    this.jobsArr.push(newJob);
+    // leisti ideti tik darbus sukurtus pabga Job klase
+    if (newJob instanceof Job) {
+      // prideti darba i darbu masyva
+      this.jobsArr.push(newJob);
+    } else {
+      alert('not a real job');
+    }
   }
 
   finishJob(jobObj) {
